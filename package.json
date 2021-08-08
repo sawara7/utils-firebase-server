@@ -1,0 +1,27 @@
+{
+  "name": "firebase-utils-server",
+  "version": "0.0.1",
+  "description": "firebase-utils for server-side.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "postinstall": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "firebase-admin": "^9.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sawara7/firebase-utils-server.git"
+  },
+  "author": "sawara7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sawara7/firebase-utils-server/issues"
+  },
+  "homepage": "https://github.com/sawara7/firebase-utils-server#readme"
+}
