@@ -19,6 +19,7 @@ function initializeApp(settings) {
     if (initialized) {
         return;
     }
+    initialized = true;
     firebase_admin_1.default.initializeApp({
         credential: firebase_admin_1.default.credential.cert({
             projectId: settings.project_id,
