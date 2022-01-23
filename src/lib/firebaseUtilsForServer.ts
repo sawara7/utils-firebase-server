@@ -14,7 +14,9 @@ export interface FirebaseSettings {
     database_url: string
 }
 
+let initialized: boolean = false
 export function initializeApp(settings: FirebaseSettings) {
+    if (initialized) {return}
     admin.initializeApp({
         credential: admin.credential.cert({
             projectId: settings.project_id,
