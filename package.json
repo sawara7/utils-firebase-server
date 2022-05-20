@@ -12,7 +12,8 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "firebase-admin": "^9.11.0"
+    "firebase-admin": "^9.11.0",
+    "mongodb-utils": "github:sawara7/mongodb-utils"
   },
   "repository": {
     "type": "git",
