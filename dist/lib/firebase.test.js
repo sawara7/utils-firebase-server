@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const __1 = require("..");
 (function () {
     return __awaiter(this, void 0, void 0, function* () {
-        const rdb = yield __1.getRealTimeDatabase();
+        const rdb = yield (0, __1.getRealTimeDatabase)();
         console.log(yield rdb.get(yield rdb.getReference('settings')));
     });
 })();

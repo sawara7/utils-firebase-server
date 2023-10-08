@@ -1,28 +1,23 @@
 {
-  "name": "firebase-utils-server",
-  "version": "0.0.1",
-  "description": "firebase-utils for server-side.",
+  "name": "utils-firebase-server",
+  "version": "0.0.2",
+  "author": "sawara7",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "install-rimraf": "npm install --save-dev rimraf",
+    "cleanup": "rimraf package-lock.json && rimraf dist && rimraf node_modules",
+    "build": "npm run install-rimraf && npm run cleanup && npm install && tsc",
+    "tsc": "tsc"
+  },
+  "bundleDependencies": [],
+  "dependencies": {
+    "firebase-admin": "^11.11.0",
+    "utils-mongodb": "github:sawara7/utils-mongodb"
   },
   "devDependencies": {
-    "typescript": "^4.3.5"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "firebase-admin": "^9.11.0",
-    "mongodb-utils": "github:sawara7/mongodb-utils"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/sawara7/firebase-utils-server.git"
-  },
-  "author": "sawara7",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sawara7/firebase-utils-server/issues"
-  },
-  "homepage": "https://github.com/sawara7/firebase-utils-server#readme"
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  }
 }

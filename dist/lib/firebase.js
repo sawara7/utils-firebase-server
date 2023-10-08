@@ -10,16 +10,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getRealTimeDatabase = void 0;
-const mongodb_utils_1 = require("mongodb-utils");
+const utils_mongodb_1 = require("utils-mongodb");
 const __1 = require("..");
 function getRealTimeDatabase() {
     return __awaiter(this, void 0, void 0, function* () {
-        const mongo = new mongodb_utils_1.MongodbManagerClass('firebase_realtimedatabase');
+        const mongo = new utils_mongodb_1.MongodbManagerClass('firebase_realtimedatabase');
         let settings;
         if (yield mongo.connect()) {
             const res = yield mongo.find('settings');
-            settings = res[0];
-            __1.initializeApp(settings);
+            if (!res.result || !res.data)
+                throw new Error('failed');
+            settings = res.data[0];
+            (0, __1.initializeApp)(settings);
         }
         else {
             throw new Error('failed');

@@ -1,4 +1,4 @@
-import { MongodbManagerClass } from "mongodb-utils"
+import { MongodbManagerClass } from "utils-mongodb"
 import { FirebaseSettings, initializeApp, RealtimeDatabaseClass } from ".."
 
 export async function getRealTimeDatabase(): Promise<RealtimeDatabaseClass> {
@@ -6,7 +6,8 @@ export async function getRealTimeDatabase(): Promise<RealtimeDatabaseClass> {
     let settings: FirebaseSettings
     if (await mongo.connect()){
         const res = await mongo.find('settings')
-        settings = res[0] as FirebaseSettings
+        if (!res.result || !res.data) throw new Error('failed')
+        settings = res.data[0] as FirebaseSettings
         initializeApp(settings)
     }else{
         throw new Error('failed')

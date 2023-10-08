@@ -13,10 +13,10 @@ export interface FirebaseSettings {
     database_url: string;
 }
 export declare function initializeApp(settings: FirebaseSettings): void;
-export declare type Query = admin.database.Query;
-export declare type EventType = admin.database.EventType;
-export declare type Reference = admin.database.Reference;
-export declare type SnapShotCallback = (a: admin.database.DataSnapshot, b?: string | null) => any;
+export type Query = admin.database.Query;
+export type EventType = admin.database.EventType;
+export type Reference = admin.database.Reference;
+export type SnapShotCallback = (a: admin.database.DataSnapshot, b?: string | null) => any;
 export declare class RealtimeDatabaseClass {
     private basePath;
     private callbacks;
