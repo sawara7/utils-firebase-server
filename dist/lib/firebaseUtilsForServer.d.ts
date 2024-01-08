@@ -22,7 +22,7 @@ export declare class RealtimeDatabaseClass {
     private callbacks;
     constructor(basePath?: string);
     getReference(path?: string): Reference;
-    get(query: Query | Reference): Promise<Object>;
+    get(query: Query | Reference): Promise<Object | null>;
     set(path: string, value: Object): Promise<void>;
     update(path: string, value: Object): Promise<void>;
     delete(path: string): Promise<void>;

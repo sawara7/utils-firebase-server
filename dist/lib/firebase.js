@@ -19,12 +19,12 @@ function getRealTimeDatabase() {
         if (yield mongo.connect()) {
             const res = yield mongo.find('settings');
             if (!res.result || !res.data)
-                throw new Error('failed');
+                throw new Error('failed get settings from mongoDB');
             settings = res.data[0];
             (0, __1.initializeApp)(settings);
         }
         else {
-            throw new Error('failed');
+            throw new Error('failed getRealtimeDatabase');
         }
         return new __1.RealtimeDatabaseClass();
     });

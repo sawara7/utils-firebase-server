@@ -42,7 +42,7 @@ export class RealtimeDatabaseClass {
         return admin.database().ref(p);
     }
 
-    async get(query: Query | Reference): Promise<Object> {
+    async get(query: Query | Reference): Promise<Object | null> {
         let res = await query.once('value');
         return res.val();
     }

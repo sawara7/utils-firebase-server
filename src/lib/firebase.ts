@@ -6,11 +6,11 @@ export async function getRealTimeDatabase(): Promise<RealtimeDatabaseClass> {
     let settings: FirebaseSettings
     if (await mongo.connect()){
         const res = await mongo.find('settings')
-        if (!res.result || !res.data) throw new Error('failed')
+        if (!res.result || !res.data) throw new Error('failed get settings from mongoDB')
         settings = res.data[0] as FirebaseSettings
         initializeApp(settings)
     }else{
-        throw new Error('failed')
+        throw new Error('failed getRealtimeDatabase')
     }
     return new RealtimeDatabaseClass()
 }
