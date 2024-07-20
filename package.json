@@ -5,8 +5,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "ncu && npm install && tsc",
-    "tsc": "tsc"
+    "build": "ncu -u && npm install && npm update && tsc",
+    "commit": "git commit -am 'commit' && npm version patch && git push"
   },
   "bundleDependencies": [],
   "dependencies": {
