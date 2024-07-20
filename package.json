@@ -1,6 +1,6 @@
 {
   "name": "utils-firebase-server",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "sawara7",
   "license": "MIT",
   "main": "dist/index.js",
