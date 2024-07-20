@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getRealTimeDatabase = void 0;
+exports.getRealTimeDatabase = getRealTimeDatabase;
 const utils_mongodb_1 = require("utils-mongodb");
 const __1 = require("..");
 function getRealTimeDatabase() {
@@ -29,4 +29,3 @@ function getRealTimeDatabase() {
         return new __1.RealtimeDatabaseClass();
     });
 }
-exports.getRealTimeDatabase = getRealTimeDatabase;

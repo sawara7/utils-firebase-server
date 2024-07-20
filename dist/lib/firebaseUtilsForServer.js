@@ -12,7 +12,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RealtimeDatabaseClass = exports.initializeApp = void 0;
+exports.RealtimeDatabaseClass = void 0;
+exports.initializeApp = initializeApp;
 const firebase_admin_1 = __importDefault(require("firebase-admin"));
 let initialized = false;
 function initializeApp(settings) {
@@ -29,7 +30,6 @@ function initializeApp(settings) {
         databaseURL: settings.database_url
     });
 }
-exports.initializeApp = initializeApp;
 class RealtimeDatabaseClass {
     constructor(basePath = "") {
         this.basePath = basePath;

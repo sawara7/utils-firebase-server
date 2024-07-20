@@ -5,19 +5,16 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install-rimraf": "npm install --save-dev rimraf",
-    "cleanup": "rimraf package-lock.json && rimraf dist && rimraf node_modules",
-    "build": "npm run install-rimraf && npm run cleanup && npm install && tsc",
+    "build": "ncu && npm install && tsc",
     "tsc": "tsc"
   },
   "bundleDependencies": [],
   "dependencies": {
-    "firebase-admin": "^11.11.0",
+    "firebase-admin": "^12.2.0",
     "utils-mongodb": "github:sawara7/utils-mongodb"
   },
   "devDependencies": {
-    "rimraf": "^5.0.5",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.14.11",
+    "typescript": "^5.5.3"
   }
 }
