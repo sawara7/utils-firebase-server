@@ -10,11 +10,11 @@
   },
   "bundleDependencies": [],
   "dependencies": {
-    "firebase-admin": "^12.2.0",
+    "firebase-admin": "^12.4.0",
     "utils-mongodb": "github:sawara7/utils-mongodb"
   },
   "devDependencies": {
-    "@types/node": "^20.14.11",
-    "typescript": "^5.5.3"
+    "@types/node": "^22.5.4",
+    "typescript": "^5.6.2"
   }
 }
